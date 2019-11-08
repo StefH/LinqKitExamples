@@ -7,7 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinqKitExampleConsoleApp", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinqKitClassLibrary", "LinqKitClassLibrary\LinqKitClassLibrary.csproj", "{662A8700-AEF6-4D72-A45C-71DD68031F24}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppForTestingEFCore3", "ConsoleAppForTestingEFCore3\ConsoleAppForTestingEFCore3.csproj", "{FAD116F9-4877-4806-822D-8CE006B52995}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppForTestingEFCore3", "ConsoleAppForTestingEFCore3\ConsoleAppForTestingEFCore3.csproj", "{FAD116F9-4877-4806-822D-8CE006B52995}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinqKit.Microsoft.EntityFrameworkCore", "..\LINQKit\src\LinqKit.Microsoft.EntityFrameworkCore\LinqKit.Microsoft.EntityFrameworkCore.csproj", "{77F3C3A8-6129-4AD2-A775-CDBFBE3A7ABB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinqKit.Core", "..\LINQKit\src\LinqKit.Core\LinqKit.Core.csproj", "{40DDE896-9F82-4958-90DE-EF7F015B5930}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{FAD116F9-4877-4806-822D-8CE006B52995}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FAD116F9-4877-4806-822D-8CE006B52995}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FAD116F9-4877-4806-822D-8CE006B52995}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77F3C3A8-6129-4AD2-A775-CDBFBE3A7ABB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77F3C3A8-6129-4AD2-A775-CDBFBE3A7ABB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77F3C3A8-6129-4AD2-A775-CDBFBE3A7ABB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77F3C3A8-6129-4AD2-A775-CDBFBE3A7ABB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40DDE896-9F82-4958-90DE-EF7F015B5930}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40DDE896-9F82-4958-90DE-EF7F015B5930}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40DDE896-9F82-4958-90DE-EF7F015B5930}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40DDE896-9F82-4958-90DE-EF7F015B5930}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using LinqKit;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -23,7 +24,7 @@ namespace ConsoleAppForTestingEFCore3
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //optionsBuilder.UseSqlServer(@"Server=.\SQLEXPRESS;Database=MyDatabase;Trusted_Connection=True;");
+            optionsBuilder.UseInMemoryDatabase("LinqKitEFCore3");
         }
     }
 
@@ -31,22 +32,28 @@ namespace ConsoleAppForTestingEFCore3
     {
         static void Main(string[] args)
         {
-            Expression<Func<IQueryable<Order>, decimal?>> expression = orders => orders.Average(o => (decimal?)o.Amount);
+            var context = new MyDbContext();
+            context.Orders.Add(new Order { OrderDate = DateTime.Now.AddDays(-1).Date, Amount = 1 });
+            context.Orders.Add(new Order { OrderDate = DateTime.Now.AddDays(-1).Date, Amount = 2 });
+            context.SaveChanges();
 
-            using (var context = new MyDbContext())
-            {
-                IQueryable<Order> orders = context.Orders;
-                var q = from o in orders.AsExpandable()
-                        group o by o.OrderDate into g
-                        select new
-                        {
-                            OrderDate = g.Key,
-                            AggregatedAmount = expression.Invoke(g.AsQueryable())
-                        };
-                //ToList or ToListAsync:
-                q.ToList().ForEach(Console.WriteLine);
-                Console.ReadLine();
-            }
+            //Expression<Func<IQueryable<Order>, decimal>> expression = orders => orders.Average(o => (decimal)o.Amount);
+            Expression<Func<IGrouping<DateTime, Order>, decimal>> expression = orders => orders.Average(o => (decimal)o.Amount);
+
+            IQueryable<Order> orders = context.Orders.AsExpandable();
+            var q = from o in orders
+                    group o by o.OrderDate into g
+                    select new
+                    {
+                        OrderDate = g.Key,
+                        AggregatedAmount = expression.Invoke(g)
+                    };
+
+            Console.WriteLine(q.ToString());
+
+
+            q.ToList().ForEach(x => Console.WriteLine($"{x.OrderDate} : {x.AggregatedAmount}"));
+            Console.WriteLine("Hello World!");
         }
     }
 }
