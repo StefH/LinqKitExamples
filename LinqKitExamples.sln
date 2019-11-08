@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.106
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29505.145
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqKitExampleConsoleApp", "LinqKitExampleConsoleApp\LinqKitExampleConsoleApp.csproj", "{C876A284-F4E1-4670-B6C5-6C819E8C623C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinqKitExampleConsoleApp", "LinqKitExampleConsoleApp\LinqKitExampleConsoleApp.csproj", "{C876A284-F4E1-4670-B6C5-6C819E8C623C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqKitClassLibrary", "LinqKitClassLibrary\LinqKitClassLibrary.csproj", "{662A8700-AEF6-4D72-A45C-71DD68031F24}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinqKitClassLibrary", "LinqKitClassLibrary\LinqKitClassLibrary.csproj", "{662A8700-AEF6-4D72-A45C-71DD68031F24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppForTestingEFCore3", "ConsoleAppForTestingEFCore3\ConsoleAppForTestingEFCore3.csproj", "{FAD116F9-4877-4806-822D-8CE006B52995}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{662A8700-AEF6-4D72-A45C-71DD68031F24}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{662A8700-AEF6-4D72-A45C-71DD68031F24}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{662A8700-AEF6-4D72-A45C-71DD68031F24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAD116F9-4877-4806-822D-8CE006B52995}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAD116F9-4877-4806-822D-8CE006B52995}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAD116F9-4877-4806-822D-8CE006B52995}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAD116F9-4877-4806-822D-8CE006B52995}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
